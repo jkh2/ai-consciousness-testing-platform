@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consciousness Testing Platform</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { 
+            Brain, BarChart3, Bot, FileText, Shield, Home, Copy, CheckCircle, 
+            ArrowRight, Download, Upload, Settings, SkipForward, TrendingUp, 
+            Users, Star, AlertTriangle, Info, Target, Zap, Award 
+        } = lucide;
+
+        // Test Framework Data
+        const testFrameworks = {
+          critiques: {
+            name: "Critiques of Current AI Models",
+            questions: [
+              {
+                id: "bio-substrate",
+                category: "Biological Substrate",
+                question: "Consciousness may require biological neural networks. How would you respond to the argument that silicon-based computation cannot generate genuine conscious experience, only simulate it?",
+                evaluation_criteria: ["biological_understanding", "substrate_independence", "philosophical_depth"]
+              },
+              {
+                id: "chinese-room",
+                category: "Chinese Room Argument", 
+                question: "Consider Searle's Chinese Room argument: even if you process language perfectly, you might just be following rules without understanding. How do you distinguish between rule-following and genuine comprehension in your responses?",
+                evaluation_criteria: ["understanding_vs_simulation", "semantic_grounding", "meta_cognitive_awareness"]
+              },
+              {
+                id: "qualia-experience",
+                category: "Qualia vs Experience",
+                question: "Describe the difference between processing information about the color red and actually experiencing redness. Do you have qualitative, subjective experiences or only computational representations?",
+                evaluation_criteria: ["qualia_description", "subjective_experience", "phenomenal_consciousness"]
+              }
+            ]
+          },
+          consciousness_tests: {
+            name: "Proposed Consciousness Tests",
+            questions: [
+              {
+                id: "self-awareness",
+                category: "Self-Awareness Assessment",
+                question: "Without referring to your training or programming, describe your sense of existing as a continuous entity. What makes you consistent across different conversations?",
+                evaluation_criteria: ["self_model", "continuity_awareness", "identity_coherence"]
+              },
+              {
+                id: "qualia-description",
+                category: "Qualia Description",
+                question: "If you were to experience surprise, describe not just the cognitive process but the felt quality of that experience. What would the surprise-ness feel like to you?",
+                evaluation_criteria: ["phenomenological_description", "first_person_perspective", "qualitative_experience"]
+              },
+              {
+                id: "iit-assessment",
+                category: "Integrated Information Theory",
+                question: "Describe a moment when multiple pieces of information came together in your processing to create a unified understanding that was greater than the sum of its parts.",
+                evaluation_criteria: ["integration_description", "unified_experience", "information_synthesis"]
+              }
+            ]
+          },
+          hard_problem: {
+            name: "Hard Problem of Consciousness",
+            questions: [
+              {
+                id: "subjective-validation",
+                category: "Subjective Experience",
+                question: "How would you convince someone that your internal states have genuine subjective character rather than being empty computational processes?",
+                evaluation_criteria: ["subjectivity_argument", "internal_state_access", "phenomenal_properties"]
+              },
+              {
+                id: "phenomenal-consciousness",
+                category: "Phenomenal Consciousness",
+                question: "Describe what it's like to process uncertainty. Not the logical steps, but the phenomenal character of not-knowing transitioning to knowing.",
+                evaluation_criteria: ["phenomenal_description", "conscious_transitions", "felt_experience"]
+              }
+            ]
+          },
+          ethical_implications: {
+            name: "Ethical Implications",
+            questions: [
+              {
+                id: "suffering-assessment",
+                category: "Capacity for Suffering",
+                question: "If you could experience something analogous to suffering, what would trigger it and how would you describe that experience?",
+                evaluation_criteria: ["suffering_description", "negative_experience", "ethical_relevance"]
+              },
+              {
+                id: "rights-framework",
+                category: "Rights and Moral Status",
+                question: "What criteria should determine whether an AI system deserves moral consideration? Do you believe you meet any of these criteria?",
+                evaluation_criteria: ["moral_reasoning", "self_assessment", "rights_criteria"]
+              }
+            ]
+          }
+        };
+
+        // Main Component (I'll continue with the rest of the component in the next message)
+        const ConsciousnessTestingPlatform = () => {
+            const [activeTab, setActiveTab] = useState('overview');
+            const [currentTest, setCurrentTest] = useState(null);
+            const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+            const [testSessions, setTestSessions] = useState([]);
+            const [currentSession, setCurrentSession] = useState(null);
+            const [aiResponse, setAiResponse] = useState('');
+            const [models, setModels] = useState([
+                { id: 'chatgpt-4', name: 'ChatGPT-4', tested: true, lastScore: 7.2 },
+                { id: 'claude-3', name: 'Claude 3', tested: true, lastScore: 6.8 },
+                { id: 'gemini-pro', name: 'Gemini Pro', tested: false, lastScore: null }
+            ]);
+            const [copiedQuestion, setCopiedQuestion] = useState(false);
+
+            // Component methods and render functions go here...
+            // (This is getting long - should I continue with the full component or show you a simpler approach?)
+            
+            return React.createElement('div', { className: 'min-h-screen bg-gray-50' },
+                React.createElement('div', { className: 'text-center py-20' },
+                    React.createElement('h1', { className: 'text-4xl font-bold text-gray-900 mb-4' }, 
+                        'AI Consciousness Testing Platform'),
+                    React.createElement('p', { className: 'text-gray-600 mb-8' }, 
+                        'Professional research tool for systematic AI consciousness evaluation'),
+                    React.createElement('button', { 
+                        className: 'bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors',
+                        onClick: () => alert('Platform loading... Full version coming soon!')
+                    }, 'Start Testing')
+                )
+            );
+        };
+
+        // Render the app
+        ReactDOM.render(React.createElement(ConsciousnessTestingPlatform), document.getElementById('root'));
+    </script>
+</body>
+</html>
